@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <script>
+
+        // ES 1)
+        function numero(num1, num2) {
+            return num1 === 50 || num2 === 50 || (num1 + num2) === 50;
+        }
+        console.log(numero(50, 30)); // sarà true se uno dei due numeri è 50 
+        console.log(numero(15, 35)); // sarà true se la somma dei numeri da come risultato 50 
+        console.log(numero(20, 10)); // sarà false se nessuna condizione è corretta 
+
+        // ES 3)
+        function myFunction2(num1, num2) {
+            return ((num1 >= 40 && num1 <= 60 || num1 >= 70 && num1 <= 100) && (num2 >= 40 && num2 <= 60 || num2 >= 70 && num2 <= 100));
+        }
+        console.log(myFunction2(50, 55)); // true perchè compresi tra 40 e 60 altrimenti false
+        console.log(myFunction2(80, 90)); // true perchè compresi tra 70 e 100 altrtimenti false
+        console.log(myFunction2(50, 90)); // true perchè compresi sia tra 40 e 60 e sia tra 70 e 100 altrtimenti false
+
+        // ES4)
+        function nameCity(città) {
+            if (città.startsWith("Los") || città.startsWith("New")) {
+                return città;
+            } else {
+                return false;
+            }
+        }
+        console.log(nameCity('Los Angeles'));
+        console.log(nameCity('New York'));
+        console.log(nameCity('Napoli'));
+
+        // ES2)
+        function removeCharAt(str, index) {
+            if (index < 0 || index >= str.length) {
+                return str;
+            }
+            return str.slice(0, index) + str.slice(index + 1);
+        }
+        console.log(removeCharAt("Hello, World!", 7));
+
+        // ES5)
+        let numeri = [2, 2, 2, 2, 2];
+
+        // FUNCTION --> SCORRE L'ARRAY E MENTRE LO SCORRE FA LA SOMMA
+        function sommaArray(number) {
+            let somma = 0;
+            for (let j = 0; j < number.length; j++) {
+                somma = somma + number[j];
+            }
+            return somma;
+        }
+        console.log(sommaArray(numero));
+
+        // ES6)
+        // FUNCTION VERIFICA
+        function verifica(n) {
+            for (let i = 0; i < n.length; i++) {
+                if ((n[i] === 1) || (n[i] === 3)) {
+                    console.log("NUMERO VERIFICATO")
+                    return false;
+                }
+            }
+            return true;
+        }
+        console.log("L'array non contiene 1 o 3: ", verifica(numero));
+
+    </script>
+</body>
+
+</html>
