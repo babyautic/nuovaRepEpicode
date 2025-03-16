@@ -12,10 +12,7 @@ function App() {
       <MyNavComponent />
       <WelcomeComponent />
       <MyFooterComponent />
-
     </div>
-
-
   );
 }
 
