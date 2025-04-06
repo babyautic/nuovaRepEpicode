@@ -6,7 +6,7 @@ export default function MyNavComponent({ searchTerm, setSearchTerm, categoryFilt
   return (
     <Navbar expand="lg" className="navbar-custom">
       <Container>
-        <Navbar.Brand href="#home">React Books</Navbar.Brand>
+        <Navbar.Brand href="#home">Epic Books</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

@@ -5,7 +5,7 @@ import AddComment from './AddComment';
 const CommentArea = ({ book }) => {
   const [reviews, setReviews] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true); // Stato di caricamento
+  const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -22,7 +22,7 @@ const CommentArea = ({ book }) => {
         console.error('Error fetching reviews:', error);
         setError('Failed to load reviews.');
       } finally {
-        setLoading(false); // Quando il caricamento è finito
+        setLoading(false);
       }
     };
 
@@ -33,7 +33,7 @@ const CommentArea = ({ book }) => {
 
   return (
     <div>
-      {loading && <p>Loading...</p>} {/* Mostra "Loading..." durante il caricamento */}
+      {loading && <p>Loading...</p>} 
       {error && <p>{error}</p>}
       <CommentList reviews={reviews} />
       <AddComment book={book} />

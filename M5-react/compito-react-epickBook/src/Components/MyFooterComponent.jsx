@@ -7,7 +7,7 @@ export default function MyFooterComponent() {
       <footer style={footerStyle}>
         <div style={containerStyle}>
           <div style={leftStyle}>
-            <h4 style={headingStyle}>Epic kBoocks</h4>
+            <h4 style={headingStyle}>Epic Boocks</h4>
             <ul style={listStyle}>
               <li><a href="/" style={linkStyle}>Home</a></li>
             </ul>
